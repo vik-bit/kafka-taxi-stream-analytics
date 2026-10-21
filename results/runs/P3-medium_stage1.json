@@ -1,0 +1,62 @@
+{
+  "done": true,
+  "run_id": "P3-medium",
+  "published": 16521,
+  "rejected": 0,
+  "eps": 456.88,
+  "elapsed_sec": 36.16,
+  "consumers_started": 4,
+  "consumers_assigned": 4,
+  "idle_consumers": 0,
+  "assignment": {
+    "0": [
+      3
+    ],
+    "1": [
+      1
+    ],
+    "3": [
+      2,
+      3
+    ],
+    "2": [
+      0,
+      1
+    ]
+  },
+  "max_lag_raw": 556,
+  "bloom": {
+    "inserted": 16521,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "expected_items": 200000,
+    "false_positive_target": 0.01,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "first_queries": 16000,
+    "repeat_queries": 521,
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "false_positive_example": null,
+    "partition_local_missed_duplicates": 0,
+    "injected_duplicates": 312,
+    "partition_local_fn_rate": 0.0
+  },
+  "assignment_at_shutdown": {
+    "0": [
+      3
+    ],
+    "1": [
+      1
+    ],
+    "3": [
+      2,
+      3
+    ],
+    "2": [
+      0,
+      1
+    ]
+  }
+}

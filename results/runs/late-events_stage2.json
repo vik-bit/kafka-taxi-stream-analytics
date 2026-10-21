@@ -1,0 +1,62 @@
+{
+  "done": true,
+  "run_id": "late-events",
+  "processed": 713,
+  "unique_ids": 700,
+  "duplicate_processing": 13,
+  "eps": 7.49,
+  "elapsed_sec": 95.135,
+  "max_lag_clean": 1,
+  "discarded_late": 0,
+  "late_examples": [
+    {
+      "event_id": "2024-01-row-00000009",
+      "event_time": "2024-01-04T16:00:07",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:00:22",
+      "event_time_lateness_sec": 40.0,
+      "producer_ts_ms": 1791476969701,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000065",
+      "event_time": "2024-01-04T16:00:36",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:00:43",
+      "event_time_lateness_sec": 32.0,
+      "producer_ts_ms": 1791476976201,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000063",
+      "event_time": "2024-01-04T16:00:35",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:00:48",
+      "event_time_lateness_sec": 38.0,
+      "producer_ts_ms": 1791476977450,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000108",
+      "event_time": "2024-01-04T16:00:56",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:00:57",
+      "event_time_lateness_sec": 26.0,
+      "producer_ts_ms": 1791476979951,
+      "decision": "included"
+    }
+  ],
+  "processing_latency_p50_ms": 55.0,
+  "processing_latency_p95_ms": 70.0,
+  "bloom": {
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "inserted": 713,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "false_positive_example": null
+  },
+  "checkpoint_state": false,
+  "state_note": "Stage 2 keeps DGIM, reservoirs, HyperLogLog, and window sets in memory. Offsets are committed every 200 events (at-least-once). A kill before commit replays that suffix, and without a checkpoint the in-memory sketches start empty while Kafka resumes from the last commit, so the prefix is not recomputed."
+}

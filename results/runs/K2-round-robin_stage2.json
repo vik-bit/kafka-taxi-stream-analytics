@@ -1,0 +1,98 @@
+{
+  "done": true,
+  "run_id": "K2-round-robin",
+  "processed": 16661,
+  "unique_ids": 16000,
+  "duplicate_processing": 661,
+  "eps": 455.74,
+  "elapsed_sec": 36.558,
+  "max_lag_clean": 174,
+  "discarded_late": 1435,
+  "late_examples": [
+    {
+      "event_id": "2024-01-row-00000150",
+      "event_time": "2024-01-04T16:01:13",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:01:25",
+      "event_time_lateness_sec": 32.0,
+      "producer_ts_ms": 1791476745862,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000151",
+      "event_time": "2024-01-04T16:01:14",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:01:25",
+      "event_time_lateness_sec": 31.0,
+      "producer_ts_ms": 1791476745862,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000152",
+      "event_time": "2024-01-04T16:01:14",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:01:25",
+      "event_time_lateness_sec": 31.0,
+      "producer_ts_ms": 1791476745862,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000153",
+      "event_time": "2024-01-04T16:01:15",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:01:25",
+      "event_time_lateness_sec": 30.0,
+      "producer_ts_ms": 1791476745862,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00006476",
+      "event_time": "2024-01-04T16:51:21",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T17:03:32",
+      "event_time_lateness_sec": 751.0,
+      "producer_ts_ms": 1791476753794,
+      "decision": "discarded"
+    },
+    {
+      "event_id": "2024-01-row-00003020",
+      "event_time": "2024-01-04T16:24:07",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T17:04:27",
+      "event_time_lateness_sec": 2440.0,
+      "producer_ts_ms": 1791476753865,
+      "decision": "discarded"
+    },
+    {
+      "event_id": "2024-01-row-00004923",
+      "event_time": "2024-01-04T16:38:53",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T17:06:54",
+      "event_time_lateness_sec": 1701.0,
+      "producer_ts_ms": 1791476750644,
+      "decision": "discarded"
+    },
+    {
+      "event_id": "2024-01-row-00004936",
+      "event_time": "2024-01-04T16:38:57",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T17:06:54",
+      "event_time_lateness_sec": 1697.0,
+      "producer_ts_ms": 1791476750662,
+      "decision": "discarded"
+    }
+  ],
+  "processing_latency_p50_ms": 220.0,
+  "processing_latency_p95_ms": 2881.0,
+  "bloom": {
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "inserted": 16661,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "false_positive_example": null
+  },
+  "checkpoint_state": false,
+  "state_note": "Stage 2 keeps DGIM, reservoirs, HyperLogLog, and window sets in memory. Offsets are committed every 200 events (at-least-once). A kill before commit replays that suffix, and without a checkpoint the in-memory sketches start empty while Kafka resumes from the last commit, so the prefix is not recomputed."
+}

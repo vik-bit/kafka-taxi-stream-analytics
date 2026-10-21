@@ -1,0 +1,66 @@
+{
+  "done": true,
+  "run_id": "bloom-fp",
+  "processed": 5089,
+  "unique_ids": 5000,
+  "duplicate_processing": 89,
+  "eps": 809.76,
+  "elapsed_sec": 6.285,
+  "max_lag_clean": 261,
+  "discarded_late": 0,
+  "late_examples": [
+    {
+      "event_id": "2024-01-row-00000164",
+      "event_time": "2024-01-04T16:01:22",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:05:02",
+      "event_time_lateness_sec": 240.0,
+      "producer_ts_ms": 1791476945103,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000166",
+      "event_time": "2024-01-04T16:01:22",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:05:02",
+      "event_time_lateness_sec": 240.0,
+      "producer_ts_ms": 1791476945103,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000168",
+      "event_time": "2024-01-04T16:01:22",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:05:02",
+      "event_time_lateness_sec": 240.0,
+      "producer_ts_ms": 1791476945103,
+      "decision": "included"
+    },
+    {
+      "event_id": "2024-01-row-00000172",
+      "event_time": "2024-01-04T16:01:23",
+      "window_start": "2024-01-04T16:00:00",
+      "watermark": "2024-01-04T16:05:02",
+      "event_time_lateness_sec": 239.0,
+      "producer_ts_ms": 1791476945103,
+      "decision": "included"
+    }
+  ],
+  "processing_latency_p50_ms": 879.0,
+  "processing_latency_p95_ms": 3711.0,
+  "bloom": {
+    "fp_rate": 0.8052,
+    "fn_rate": 0.0,
+    "inserted": 5089,
+    "bit_array_size": 1580,
+    "hash_functions": 3,
+    "memory_bytes": 198,
+    "false_positive_example": {
+      "event_id": "2024-01-row-00000018",
+      "pickup_zone": 142,
+      "note": "Bloom reported seen before this event_id was inserted"
+    }
+  },
+  "checkpoint_state": false,
+  "state_note": "Stage 2 keeps DGIM, reservoirs, HyperLogLog, and window sets in memory. Offsets are committed every 200 events (at-least-once). A kill before commit replays that suffix, and without a checkpoint the in-memory sketches start empty while Kafka resumes from the last commit, so the prefix is not recomputed."
+}

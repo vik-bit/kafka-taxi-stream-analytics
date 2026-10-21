@@ -1,0 +1,50 @@
+{
+  "done": true,
+  "run_id": "bloom-fp",
+  "published": 5089,
+  "rejected": 0,
+  "eps": 844.31,
+  "elapsed_sec": 6.027,
+  "consumers_started": 4,
+  "consumers_assigned": 4,
+  "idle_consumers": 0,
+  "assignment": {
+    "2": [
+      3
+    ],
+    "1": [
+      0
+    ],
+    "0": [
+      1
+    ],
+    "3": [
+      2
+    ]
+  },
+  "max_lag_raw": 1002,
+  "bloom": {
+    "inserted": 5089,
+    "bit_array_size": 1580,
+    "hash_functions": 3,
+    "memory_bytes": 198,
+    "expected_items": 400,
+    "false_positive_target": 0.15,
+    "false_positives": 4026,
+    "false_negatives": 0,
+    "first_queries": 5000,
+    "repeat_queries": 89,
+    "fp_rate": 0.8052,
+    "fn_rate": 0.0,
+    "false_positive_example": {
+      "event_id": "2024-01-row-00000018",
+      "pickup_zone": 142,
+      "dropoff_zone": 230,
+      "partition": 3,
+      "note": "Bloom reported seen before this event_id was inserted"
+    },
+    "partition_local_missed_duplicates": 0,
+    "injected_duplicates": 89,
+    "partition_local_fn_rate": 0.0
+  }
+}

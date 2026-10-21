@@ -1,0 +1,47 @@
+{
+  "done": true,
+  "run_id": "K2-round-robin",
+  "published": 16661,
+  "rejected": 0,
+  "eps": 461.1,
+  "elapsed_sec": 36.133,
+  "consumers_started": 4,
+  "consumers_assigned": 4,
+  "idle_consumers": 0,
+  "assignment": {
+    "2": [
+      2,
+      3
+    ],
+    "3": [
+      0,
+      1
+    ],
+    "1": [
+      1
+    ],
+    "0": [
+      0,
+      1
+    ]
+  },
+  "max_lag_raw": 1437,
+  "bloom": {
+    "inserted": 16661,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "expected_items": 200000,
+    "false_positive_target": 0.01,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "first_queries": 16000,
+    "repeat_queries": 661,
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "false_positive_example": null,
+    "partition_local_missed_duplicates": 221,
+    "injected_duplicates": 315,
+    "partition_local_fn_rate": 0.7015873015873015
+  }
+}

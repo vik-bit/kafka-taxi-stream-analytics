@@ -1,0 +1,5 @@
+kafka-python==2.2.15
+pyyaml==6.0.2
+pandas==2.2.3
+pyarrow==18.1.0
+matplotlib==3.10.0

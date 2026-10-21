@@ -1,0 +1,20 @@
+{
+  "done": true,
+  "run_id": "K2-round-robin",
+  "produced": 16310,
+  "source_rows": 16000,
+  "duplicates": 310,
+  "delayed": 317,
+  "eps": 462.92,
+  "eps_during_read": 1000.04,
+  "target_rate": 1000.0,
+  "elapsed_sec": 35.233,
+  "partition_counts": {
+    "0": 4176,
+    "1": 4010,
+    "2": 4103,
+    "3": 4021
+  },
+  "partition_skew": 0.256,
+  "partition_key": "none"
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "restart-demo",
+  "before_kill": {
+    "lag": 656,
+    "committed": 4085,
+    "end": 4741,
+    "processed": 4600
+  },
+  "while_stopped": {
+    "lag": 2505,
+    "committed": 4085,
+    "end": 6590
+  },
+  "after_recovery": {
+    "lag": 0,
+    "committed": 8557,
+    "end": 8557
+  },
+  "produced": 8000,
+  "stage2_processed_after_restart": 4472,
+  "stage2_unique_ids": 3915,
+  "duplicate_processing_in_restarted_process": 557,
+  "event_ids_applied_twice": 944,
+  "what_happened": "Stage 2 was killed after a commit. While it was down the producer kept writing, the committed offset stayed put, and lag (log end minus committed offset) grew. On restart the same group resumed at that commit and drained the suffix; lag returned to 0. In-memory DGIM, reservoirs, and windows started empty because checkpoint_state is false, so the committed prefix was not rebuilt. If the kill lands after a batch is applied and before the next commit (commit_every is 1000), those event ids are applied twice. This run applied 944 event ids twice. The pipeline is at-least-once."
+}

@@ -1,0 +1,20 @@
+{
+  "done": true,
+  "run_id": "rate-low",
+  "produced": 16310,
+  "source_rows": 16000,
+  "duplicates": 310,
+  "delayed": 317,
+  "eps": 91.74,
+  "eps_during_read": 100.01,
+  "target_rate": 100.0,
+  "elapsed_sec": 177.789,
+  "partition_counts": {
+    "0": 4085,
+    "1": 5468,
+    "2": 4178,
+    "3": 2579
+  },
+  "partition_skew": 0.3353,
+  "partition_key": "pickup_zone"
+}

@@ -1,0 +1,17 @@
+{
+  "done": true,
+  "run_id": "late-events",
+  "produced": 713,
+  "source_rows": 700,
+  "duplicates": 13,
+  "delayed": 46,
+  "eps": 7.61,
+  "eps_during_read": 8.01,
+  "target_rate": 8.0,
+  "elapsed_sec": 93.675,
+  "partition_counts": {
+    "0": 713
+  },
+  "partition_skew": 1.0,
+  "partition_key": "pickup_zone"
+}

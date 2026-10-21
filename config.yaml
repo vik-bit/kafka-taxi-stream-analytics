@@ -1,0 +1,52 @@
+# One file for every parameter the TA is expected to change.
+# Topic names are fixed by the assignment and are not configurable.
+
+bootstrap_servers: localhost:9092
+data_path: data/taxi_sample.csv
+
+# Default run identity. Experiment runs override this.
+run_id: P3-medium
+
+partitions: 4
+metrics_partitions: 1
+lsh_partitions: 1
+consumers: 4
+# pickup_zone keeps all trips for a zone on one partition.
+# none uses Kafka's round-robin partitioner (no explicit key).
+partition_key: pickup_zone
+
+producer_rate: 1000          # events/second
+duplicate_rate: 0.02         # 2% deliberate duplicate sends
+delayed_event_rate: 0.02     # 2% emitted late
+max_delay_seconds: 20
+producer_linger_ms: 5
+
+window_minutes: 60
+allowed_lateness_seconds: 20 # event-time watermark lag
+hll_precision: 12
+dgim_max_window: 10000
+bloom_expected_items: 200000
+bloom_false_positive_target: 0.01
+lsh_num_hashes: 100
+lsh_bands: 20
+lsh_rows_per_band: 5
+# Second required banding, still 100 hash values (10 x 10).
+lsh_alt_bands: 10
+lsh_alt_rows_per_band: 10
+jaccard_threshold: 0.50
+min_trips_per_zone: 20
+diverse_dropoffs: 10
+# Matched storage budget for event sampling vs entity sampling.
+sample_rate: 0.10
+reservoir_sizes: [100, 1000, 10000]
+reservoir_report_k: 1000
+dgim_query_ks: [1000, 5000, 10000]
+dgim_report_k: 5000
+
+max_events: 20000
+random_seed: 42
+# Optional sketch checkpoint. The restart demo leaves this off on purpose.
+checkpoint_state: false
+
+results_jsonl: results/results.jsonl
+experiment_csv: results/experiment_summary.csv

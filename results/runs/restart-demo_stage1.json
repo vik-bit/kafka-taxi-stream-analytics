@@ -1,0 +1,62 @@
+{
+  "done": true,
+  "run_id": "restart-demo",
+  "published": 8557,
+  "rejected": 0,
+  "eps": 409.13,
+  "elapsed_sec": 20.915,
+  "consumers_started": 4,
+  "consumers_assigned": 4,
+  "idle_consumers": 0,
+  "assignment": {
+    "1": [
+      2,
+      3
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      0
+    ],
+    "0": [
+      3
+    ]
+  },
+  "max_lag_raw": 48,
+  "bloom": {
+    "inserted": 8557,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "expected_items": 200000,
+    "false_positive_target": 0.01,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "first_queries": 8000,
+    "repeat_queries": 557,
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "false_positive_example": null,
+    "partition_local_missed_duplicates": 0,
+    "injected_duplicates": 0,
+    "partition_local_fn_rate": 0.0
+  },
+  "assignment_at_shutdown": {
+    "1": [
+      2,
+      3
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      0
+    ],
+    "0": [
+      3
+    ]
+  }
+}

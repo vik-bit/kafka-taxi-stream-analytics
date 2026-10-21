@@ -1,0 +1,35 @@
+{
+  "done": true,
+  "run_id": "P1",
+  "published": 16310,
+  "rejected": 0,
+  "eps": 445.49,
+  "elapsed_sec": 36.612,
+  "consumers_started": 1,
+  "consumers_assigned": 1,
+  "idle_consumers": 0,
+  "assignment": {
+    "0": [
+      0
+    ]
+  },
+  "max_lag_raw": 45,
+  "bloom": {
+    "inserted": 16310,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "expected_items": 200000,
+    "false_positive_target": 0.01,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "first_queries": 16000,
+    "repeat_queries": 310,
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "false_positive_example": null,
+    "partition_local_missed_duplicates": 0,
+    "injected_duplicates": 310,
+    "partition_local_fn_rate": 0.0
+  }
+}

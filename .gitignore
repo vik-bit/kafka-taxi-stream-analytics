@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+logs/
+results/control/
+results/runs/*_applied_ids.txt
+results/runs/smoke_*
+data/*.parquet
+.venv/
+BDA_Assignment_2_Streaming_Kafka_LSH.pdf

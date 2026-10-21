@@ -1,0 +1,20 @@
+{
+  "done": true,
+  "run_id": "bloom-fp",
+  "produced": 5089,
+  "source_rows": 5000,
+  "duplicates": 89,
+  "delayed": 0,
+  "eps": 2474.23,
+  "eps_during_read": 2494.71,
+  "target_rate": 2500.0,
+  "elapsed_sec": 2.057,
+  "partition_counts": {
+    "0": 1233,
+    "1": 1754,
+    "2": 1337,
+    "3": 765
+  },
+  "partition_skew": 0.3447,
+  "partition_key": "pickup_zone"
+}

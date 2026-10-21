@@ -1,0 +1,35 @@
+{
+  "done": true,
+  "run_id": "late-events",
+  "published": 713,
+  "rejected": 0,
+  "eps": 7.54,
+  "elapsed_sec": 94.607,
+  "consumers_started": 1,
+  "consumers_assigned": 1,
+  "idle_consumers": 0,
+  "assignment": {
+    "0": [
+      0
+    ]
+  },
+  "max_lag_raw": 1,
+  "bloom": {
+    "inserted": 713,
+    "bit_array_size": 1917012,
+    "hash_functions": 7,
+    "memory_bytes": 239627,
+    "expected_items": 200000,
+    "false_positive_target": 0.01,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "first_queries": 700,
+    "repeat_queries": 13,
+    "fp_rate": 0.0,
+    "fn_rate": 0.0,
+    "false_positive_example": null,
+    "partition_local_missed_duplicates": 0,
+    "injected_duplicates": 13,
+    "partition_local_fn_rate": 0.0
+  }
+}

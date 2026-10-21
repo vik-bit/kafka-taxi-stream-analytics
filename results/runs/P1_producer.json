@@ -1,0 +1,17 @@
+{
+  "done": true,
+  "run_id": "P1",
+  "produced": 16310,
+  "source_rows": 16000,
+  "duplicates": 310,
+  "delayed": 317,
+  "eps": 462.93,
+  "eps_during_read": 999.96,
+  "target_rate": 1000.0,
+  "elapsed_sec": 35.232,
+  "partition_counts": {
+    "0": 16310
+  },
+  "partition_skew": 1.0,
+  "partition_key": "pickup_zone"
+}
