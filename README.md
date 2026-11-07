@@ -1,5 +1,7 @@
 # Taxi stream analytics
 
+[![CI](https://github.com/vik-bit/kafka-taxi-stream-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/vik-bit/kafka-taxi-stream-analytics/actions/workflows/ci.yml)
+
 A small Kafka pipeline that replays a rush-hour slice of NYC yellow taxi trips and checks approximate algorithms against exact answers on the same stream.
 
 Pickup zones are compared with MinHash and locality-sensitive hashing. Fares, routes, and slow trips are tracked with a reservoir, HyperLogLog, and DGIM. The interesting part is not a higher events-per-second number. It is what stays correct when partitions, keys, and producer speed change.
@@ -75,15 +77,17 @@ Killing the metrics stage froze its committed offset. Lag rose from 656 to 2,505
 
 Requires Docker and Python 3.12.
 
-```bat
-run_all.bat
+```bash
+./run_all.sh        # Linux / macOS; run_all.bat on Windows
 ```
 
 That installs dependencies, starts Kafka, and replays up to 20,000 trips at 1,000 events/s. Hourly reports append to `results/results.jsonl`.
 
-`run_experiments.bat` rebuilds the comparison table. It takes about 15 minutes. Knobs are in `config.yaml`: `producer_rate` (`0` means unlimited), `partitions`, `consumers`, and `partition_key` (`pickup_zone` or `none`).
+`run_experiments.bat` (Windows) rebuilds the comparison table. It takes about 15 minutes. Knobs are in `config.yaml`: `producer_rate` (`0` means unlimited), `partitions`, `consumers`, and `partition_key` (`pickup_zone` or `none`).
 
 `data/taxi_sample.csv` is the busiest four hours of NYC TLC yellow trips on 4 January 2024 (31,880 rows, 16:00–20:00). `scripts/prepare_data.py` rebuilds it from the TLC parquet.
+
+The sketches are checked against exact answers offline, without Kafka, by `python -m common.selftest`, which runs in CI.
 
 ## Layout
 
